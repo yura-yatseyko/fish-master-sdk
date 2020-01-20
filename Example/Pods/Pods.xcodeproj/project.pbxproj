@@ -10,8 +10,8 @@
 		3EBF0B65708DAC87AE2CEA4A706BA621 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		5689B4BE8FA10A68DDBFC6BEF33961E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		72A06DAF29C915D5BE49CA46320989F4 /* Pods-FishMasterSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7784FA93AAFBC70EE10C5B07768EF2 /* Pods-FishMasterSDK_Example-dummy.m */; };
-		77D3DB8F2C17DE538F8821A8AF333A37 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ABD7651A02F08442116D2CE5A9C06B /* ReplaceMe.swift */; };
 		7E3F0488C2F71F4BBBE19DDD4ED415EA /* FishMasterSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2053045D20606209A96FB8F207695779 /* FishMasterSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84A6D88523D5E922001A511C /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6D88423D5E922001A511C /* Test.swift */; };
 		8B4E7076B99B88AB680E8EB59B23586D /* FishMasterSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26131D94DC99FCC1C3D664A852CFDDF5 /* FishMasterSDK-dummy.m */; };
 		AAE318E74C3CF1297CD7C762D01F40E4 /* Pods-FishMasterSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F345964CAE7C9C2E1FB20450592343AA /* Pods-FishMasterSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAEF6582344AB193298D6801C22BB580 /* Pods-FishMasterSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFBD0729F03741C27609E7151349CAAD /* Pods-FishMasterSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		06123F9F13FF295AA42B4ED68AAD1B79 /* Pods-FishMasterSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FishMasterSDK_Tests-Info.plist"; sourceTree = "<group>"; };
-		158EC826FD004A64682B3D855C4CB70D /* FishMasterSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FishMasterSDK.framework; path = FishMasterSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		158EC826FD004A64682B3D855C4CB70D /* FishMasterSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FishMasterSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E6533E8E85EDAD455CBDB10F30EA6F4 /* Pods-FishMasterSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FishMasterSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2053045D20606209A96FB8F207695779 /* FishMasterSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FishMasterSDK-umbrella.h"; sourceTree = "<group>"; };
 		20CC6469D85EDE2AA319D58B0FC93800 /* Pods-FishMasterSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FishMasterSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -46,8 +46,8 @@
 		2CC8B88AE513698E0165FB43B9530AD0 /* Pods-FishMasterSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FishMasterSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		369F0CBA21BE0AC8D5017104FE8C4C98 /* FishMasterSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FishMasterSDK-Info.plist"; sourceTree = "<group>"; };
-		3AC17A7591A99497662C26DD8E831067 /* Pods_FishMasterSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FishMasterSDK_Example.framework; path = "Pods-FishMasterSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		436BB0AFA06E2C8AB3BFE631EED9AC6B /* FishMasterSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FishMasterSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3AC17A7591A99497662C26DD8E831067 /* Pods_FishMasterSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FishMasterSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		436BB0AFA06E2C8AB3BFE631EED9AC6B /* FishMasterSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = FishMasterSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5A7784FA93AAFBC70EE10C5B07768EF2 /* Pods-FishMasterSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FishMasterSDK_Example-dummy.m"; sourceTree = "<group>"; };
 		5BD00BE9BCF4176DB5F489A634CDA7FF /* Pods-FishMasterSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FishMasterSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5ED17729794F16B9AC486CDFE2390C8C /* Pods-FishMasterSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FishMasterSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -55,14 +55,14 @@
 		751001025647BEF6296AA601BFBEA93C /* FishMasterSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FishMasterSDK.xcconfig; sourceTree = "<group>"; };
 		78793C212A67103A07C4BB997A3CC015 /* Pods-FishMasterSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FishMasterSDK_Tests-dummy.m"; sourceTree = "<group>"; };
 		7E38FD9EDF80E15F8A1003DF6BA3BDD7 /* Pods-FishMasterSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FishMasterSDK_Example.modulemap"; sourceTree = "<group>"; };
-		817AE22D7555F4780A25CFAC0078C71C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		8538FB4ECD32740E28A1C8A2E9E89F68 /* Pods_FishMasterSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FishMasterSDK_Tests.framework; path = "Pods-FishMasterSDK_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		817AE22D7555F4780A25CFAC0078C71C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		84A6D88423D5E922001A511C /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		8538FB4ECD32740E28A1C8A2E9E89F68 /* Pods_FishMasterSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FishMasterSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE5C4D257AD56826762975AE31BE716 /* Pods-FishMasterSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FishMasterSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AE78DBBD0D2E45973C9F131FA07A9681 /* Pods-FishMasterSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FishMasterSDK_Tests.modulemap"; sourceTree = "<group>"; };
 		AEC8BCDA5C4A297C3A9AD0D52F9D8AFF /* Pods-FishMasterSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FishMasterSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B35BBEA79B39A7DFF7A7EC13E47298C2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		C4ABD7651A02F08442116D2CE5A9C06B /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = FishMasterSDK/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		B35BBEA79B39A7DFF7A7EC13E47298C2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CB1C0516D025CA83B0A4AAAC8347B502 /* Pods-FishMasterSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FishMasterSDK_Example-Info.plist"; sourceTree = "<group>"; };
 		F345964CAE7C9C2E1FB20450592343AA /* Pods-FishMasterSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FishMasterSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		F3EFCB18AAA392286884DAD3A4F5EAAF /* Pods-FishMasterSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FishMasterSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,12 +121,20 @@
 		7EA6226A459E5BB11E46E1FA0E2CBA58 /* FishMasterSDK */ = {
 			isa = PBXGroup;
 			children = (
-				C4ABD7651A02F08442116D2CE5A9C06B /* ReplaceMe.swift */,
+				84A6D88623D5EB10001A511C /* Sources */,
 				BADEE3723714F75E2A042E4BCCB64F37 /* Pod */,
 				F164FC8ED744B1004043B1B60018397D /* Support Files */,
 			);
 			name = FishMasterSDK;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		84A6D88623D5EB10001A511C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				84A6D88423D5E922001A511C /* Test.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		92F8A3E9E12262C20839A615003FA6C4 /* Development Pods */ = {
@@ -315,6 +323,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					AE669D8871106F4634417D950867D480 = {
+						LastSwiftMigration = 1120;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -382,7 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B4E7076B99B88AB680E8EB59B23586D /* FishMasterSDK-dummy.m in Sources */,
-				77D3DB8F2C17DE538F8821A8AF333A37 /* ReplaceMe.swift in Sources */,
+				84A6D88523D5E922001A511C /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +454,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 751001025647BEF6296AA601BFBEA93C /* FishMasterSDK.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -461,6 +475,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -539,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 751001025647BEF6296AA601BFBEA93C /* FishMasterSDK.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -620,8 +636,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
