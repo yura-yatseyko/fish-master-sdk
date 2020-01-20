@@ -29,7 +29,7 @@ class Network {
     }
     
     //MARK: - Requests
-    func post(with path: String, params: [String: AnyObject] = [:]) {
+    func post<T>(with path: String, params: [String: AnyObject] = [:], success: @escaping (T) -> (), failed: @escaping (RequestError) -> ()) where T : Codable {
         
         let url = URL(string: baseUrl + path)!
 
@@ -47,18 +47,23 @@ class Network {
         
         let task = session.uploadTask(with: request, from: jsonData) { data, response, error in
             
-            if let httpResponse = response as? HTTPURLResponse {
-                print(httpResponse.statusCode)
-            }
+            let statusCode = (response as? HTTPURLResponse)?.statusCode ?? -1
             
-            if let jsonData = data {
-                let decoder = JSONDecoder()
+            if let responseError = error {
+                failed(RequestError(status: statusCode, errorDescription: responseError.localizedDescription))
+            } else {
+                if let jsonData = data {
+                    
+                    let decoder = JSONDecoder()
 
-                do {
-                    let sample = try decoder.decode(Sample.self, from: jsonData)
-                    print(sample)
-                } catch {
-                    print(error.localizedDescription)
+                    do {
+                        let sample = try decoder.decode(T.self, from: jsonData)
+                        success(sample)
+                    } catch {
+                        failed(RequestError(status: statusCode, errorDescription: error.localizedDescription))
+                    }
+                } else {
+                    failed(RequestError(status: statusCode, errorDescription: "Wrong data"))
                 }
             }
         }

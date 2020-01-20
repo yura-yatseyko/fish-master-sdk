@@ -20,7 +20,11 @@ public class Test: NSObject {
             "spaceId": "slkdfslknlsknsdkvnsl"
         ] as [String : AnyObject]
         
-        network.post(with: "/test/serve/samplead", params: params)
+        network.post(with: "/test/serve/samplead", params: params, success: { (res: Sample) in
+            print(res)
+        }) { (requestError) in
+            print(requestError)
+        }
     }
     
 }

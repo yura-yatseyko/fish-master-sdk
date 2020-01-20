@@ -15,6 +15,7 @@
 		84A6D8A823D5F9B6001A511C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6D8A723D5F9B6001A511C /* Constants.swift */; };
 		84CD76EB23D5FC86003751D0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD76EA23D5FC86003751D0 /* Network.swift */; };
 		84CD76EE23D60409003751D0 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD76ED23D60409003751D0 /* Sample.swift */; };
+		84CD76F023D60CC5003751D0 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD76EF23D60CC5003751D0 /* RequestError.swift */; };
 		8B4E7076B99B88AB680E8EB59B23586D /* FishMasterSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26131D94DC99FCC1C3D664A852CFDDF5 /* FishMasterSDK-dummy.m */; };
 		AAE318E74C3CF1297CD7C762D01F40E4 /* Pods-FishMasterSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F345964CAE7C9C2E1FB20450592343AA /* Pods-FishMasterSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAEF6582344AB193298D6801C22BB580 /* Pods-FishMasterSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFBD0729F03741C27609E7151349CAAD /* Pods-FishMasterSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,6 +64,7 @@
 		84A6D8A723D5F9B6001A511C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		84CD76EA23D5FC86003751D0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		84CD76ED23D60409003751D0 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		84CD76EF23D60CC5003751D0 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		8538FB4ECD32740E28A1C8A2E9E89F68 /* Pods_FishMasterSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FishMasterSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE5C4D257AD56826762975AE31BE716 /* Pods-FishMasterSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FishMasterSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				84CD76ED23D60409003751D0 /* Sample.swift */,
+				84CD76EF23D60CC5003751D0 /* RequestError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 			files = (
 				84CD76EE23D60409003751D0 /* Sample.swift in Sources */,
 				8B4E7076B99B88AB680E8EB59B23586D /* FishMasterSDK-dummy.m in Sources */,
+				84CD76F023D60CC5003751D0 /* RequestError.swift in Sources */,
 				84A6D88523D5E922001A511C /* Test.swift in Sources */,
 				84CD76EB23D5FC86003751D0 /* Network.swift in Sources */,
 				84A6D8A823D5F9B6001A511C /* Constants.swift in Sources */,
