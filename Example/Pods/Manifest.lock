@@ -1,0 +1,16 @@
+PODS:
+  - FishMasterSDK (0.1.0)
+
+DEPENDENCIES:
+  - FishMasterSDK (from `../`)
+
+EXTERNAL SOURCES:
+  FishMasterSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FishMasterSDK: c9435d4bec8597fdfcee0e91b1e2d1dd1852cf87
+
+PODFILE CHECKSUM: 5fc2a1eea73059925a2dec95750df6f125719688
+
+COCOAPODS: 1.8.4

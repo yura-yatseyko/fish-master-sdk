@@ -1,0 +1,6 @@
+framework module Pods_FishMasterSDK_Example {
+  umbrella header "Pods-FishMasterSDK_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

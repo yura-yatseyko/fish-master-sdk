@@ -1,0 +1,6 @@
+framework module FishMasterSDK {
+  umbrella header "FishMasterSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
