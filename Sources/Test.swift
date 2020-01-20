@@ -13,4 +13,8 @@ public class Test: NSObject {
         print("Test printing")
     }
     
+    public func testAdd(a: Int, b: Int) {
+        print("Result = \(a + b)")
+    }
+    
 }
