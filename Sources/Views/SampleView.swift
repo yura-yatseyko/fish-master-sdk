@@ -17,7 +17,6 @@ public class SampleView: UIView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
         translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -32,7 +31,7 @@ public class SampleView: UIView {
         label.textAlignment = .left
         label.textColor = UIColor.black
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        
+                
         label.translatesAutoresizingMaskIntoConstraints = false
 
         self.addSubview(label)
@@ -52,7 +51,7 @@ public class SampleView: UIView {
         label.numberOfLines = 0
         label.textAlignment = .left
         label.textColor = UIColor.black
-        
+                
         label.translatesAutoresizingMaskIntoConstraints = false
 
         self.addSubview(label)
@@ -87,6 +86,8 @@ public class SampleView: UIView {
     
     private func updateComtent(with sample: Sample) {
         DispatchQueue.main.async { [weak self] in
+            self?.backgroundColor = UIColor.yellow
+            
             self?.titleLabel.text = sample.data.titleCopy
             self?.bodyLabel.text = sample.data.bodyCopy
 

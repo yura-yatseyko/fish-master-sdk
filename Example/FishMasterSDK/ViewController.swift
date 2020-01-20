@@ -14,11 +14,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Test method from FishMasterSDK
-        let test = Test()
-        test.printBaseServerUrl()
-        test.testNetworkClass()
-        
         let sampleView = SampleView(frame: CGRect.zero)
         view.addSubview(sampleView)
         
