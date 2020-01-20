@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FishMasterSDK_Example' do
+  pod 'FishMasterSDK', :path => '../'
+
+  target 'FishMasterSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
