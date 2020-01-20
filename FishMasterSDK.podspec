@@ -15,10 +15,10 @@ Pod::Spec.new do |s|
   'FishMaster SDK'
                        DESC
 
-  s.homepage         = 'https://github.com/yura-yatseyko/FishMasterSDK'
+  s.homepage         = 'https://github.com/yura-yatseyko/fish-master-sdk'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'yura-yatseyko' => 'yura.yatseyko@volpis.com' }
-  s.source           = { :git => 'https://github.com/yura-yatseyko/FishMasterSDK.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/yura-yatseyko/fish-master-sdk.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
