@@ -16,8 +16,8 @@ class ViewController: UIViewController {
         
         // Test method from FishMasterSDK
         let test = Test()
-        test.testPrint()
-        test.testAdd(a: 6, b: 9)
+        test.printBaseServerUrl()
+        test.testNetworkClass()
     }
 
 }

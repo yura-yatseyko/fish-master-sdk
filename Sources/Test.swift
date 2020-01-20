@@ -9,12 +9,18 @@ import Foundation
 
 public class Test: NSObject {
     
-    public func testPrint() {
-        print("Test printing")
+    public func printBaseServerUrl() {
+        print("Base server URL: " + Constants.serverUrl.rawValue)
     }
     
-    public func testAdd(a: Int, b: Int) {
-        print("Result = \(a + b)")
+    public func testNetworkClass() {
+        let network = Network(key: "123456788", secret: "12894198247189")
+        
+        let params = [
+            "spaceId": "slkdfslknlsknsdkvnsl"
+        ] as [String : AnyObject]
+        
+        network.post(with: "/test/serve/samplead", params: params)
     }
     
 }
