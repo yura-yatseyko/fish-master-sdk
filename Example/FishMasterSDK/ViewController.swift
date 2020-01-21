@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import SafariServices
 import FishMasterSDK
+
 
 class ViewController: UIViewController {
 
@@ -16,6 +18,8 @@ class ViewController: UIViewController {
         
         let sampleView = SampleView(frame: CGRect.zero)
         view.addSubview(sampleView)
+        
+        sampleView.delegate = self
         
         let trailing = NSLayoutConstraint(item: sampleView, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailing, multiplier: 1, constant: 0)
         let leading = NSLayoutConstraint(item: sampleView, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leading, multiplier: 1, constant: 0)
@@ -28,5 +32,12 @@ class ViewController: UIViewController {
         
     }
 
+}
+
+extension ViewController: SampleViewProtocol {
+    func action(with url: URL) {
+        let svc = SFSafariViewController(url: url)
+        present(svc, animated: true, completion: nil)
+    }
 }
 
