@@ -72,7 +72,7 @@ class Network {
     }
     
     func downloadImage(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+        session.dataTask(with: url, completionHandler: completion).resume()
     }
     
 }

@@ -172,7 +172,7 @@ public class SampleView: UIView {
     }
     
     //MARK: - Actions
-    @objc func actionButtonTapped(sender: UIButton!) {
+    @objc private func actionButtonTapped(sender: UIButton!) {
         guard let sample = self.sample else { return }
         
         if let actionUrl = URL(string: sample.actionLink) {
