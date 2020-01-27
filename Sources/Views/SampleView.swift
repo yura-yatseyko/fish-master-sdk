@@ -14,8 +14,6 @@ public protocol SampleViewProtocol {
 public class SampleView: UIView {
     
     //MARK: - Private variables
-    private let testImgUrl = "https://sevstar.net/wp-content/uploads/2018/11/%D0%91%D0%B0%D0%BD%D0%BD%D0%B5%D1%80-%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D1%8B-%D1%84%D0%BE%D0%BD.png"
-    
     private var network: Network? = nil
     private var sample: Sample? = nil
     
@@ -44,20 +42,23 @@ public class SampleView: UIView {
         imageView.backgroundColor = UIColor.red
         
         imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleToFill
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
 
         self.addSubview(imageView)
         
-        let trailing = NSLayoutConstraint(item: imageView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 0)
-        let leading = NSLayoutConstraint(item: imageView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 0)
-        let top = NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0)
-        let bottom = NSLayoutConstraint(item: imageView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0)
+        let leading = NSLayoutConstraint(item: imageView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 12)
         
-        let height = NSLayoutConstraint(item: imageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 100)
+        let top = NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 12)
+        let bottom = NSLayoutConstraint(item: imageView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: -12)
+        
+        let centerY = NSLayoutConstraint(item: imageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)
+        
+        let height = NSLayoutConstraint(item: imageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 40)
+        let width = NSLayoutConstraint(item: imageView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 40)
 
-        NSLayoutConstraint.activate([leading, trailing, top, bottom, height])
+        NSLayoutConstraint.activate([leading, centerY, height, width])
 
         return imageView
     }()
@@ -74,9 +75,29 @@ public class SampleView: UIView {
 
         self.addSubview(label)
 
-        let trailing = NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: -16)
-        let leading = NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 16)
-        let top = NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 16)
+        let trailing = NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: -12)
+        let leading = NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem: bannerImageView, attribute: .trailing, multiplier: 1, constant: 12)
+        let top = NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 12)
+
+        NSLayoutConstraint.activate([leading, trailing, top])
+
+        return label
+    }()
+    
+    private lazy var heroLabel: UILabel = {
+        let label = UILabel()
+
+        label.numberOfLines = 0
+        label.textAlignment = .left
+        label.textColor = UIColor.black
+                
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        self.addSubview(label)
+
+        let trailing = NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: -12)
+        let leading = NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem: bannerImageView, attribute: .trailing, multiplier: 1, constant: 12)
+        let top = NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 2)
 
         NSLayoutConstraint.activate([leading, trailing, top])
 
@@ -94,12 +115,12 @@ public class SampleView: UIView {
 
         self.addSubview(label)
 
-        let trailing = NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: -16)
-        let leading = NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 16)
-        let bottom = NSLayoutConstraint(item: label, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: -16)
-        let top = NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 5)
+        let trailing = NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: -12)
+        let leading = NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem: bannerImageView, attribute: .trailing, multiplier: 1, constant: 12)
+        let bottom = NSLayoutConstraint(item: label, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: -12)
+        let top = NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: heroLabel, attribute: .bottom, multiplier: 1, constant: 2)
 
-        NSLayoutConstraint.activate([leading, trailing, top])
+        NSLayoutConstraint.activate([leading, trailing, top, bottom])
 
         return label
     }()
@@ -150,10 +171,26 @@ public class SampleView: UIView {
             
             self?.sample = sample
             
+            self?.backgroundColor = UIColor.from(hexString: sample.data.bgColor)
+            
+            let fontName = sample.data.font.family
+            let fontSize = sample.data.font.size
+            let fontColor = sample.data.font.color
+            
+            self?.titleLabel.font = UIFont(name: fontName, size: CGFloat(fontSize))
+            self?.titleLabel.textColor = UIColor.from(hexString: fontColor)
+            
+            self?.heroLabel.font = UIFont(name: fontName, size: CGFloat(fontSize))
+            self?.heroLabel.textColor = UIColor.from(hexString: fontColor)
+            
+            self?.bodyLabel.font = UIFont(name: fontName, size: CGFloat(fontSize))
+            self?.bodyLabel.textColor = UIColor.from(hexString: fontColor)
+            
             self?.titleLabel.text = sample.data.titleCopy
+            self?.heroLabel.text = sample.data.heroCopy
             self?.bodyLabel.text = sample.data.bodyCopy
             
-            if let imageUrl = URL(string: self?.testImgUrl ?? ""), let network = self?.network {
+            if let imageUrl = URL(string: sample.data.logoUrl), let network = self?.network {
                 network.downloadImage(from: imageUrl) { (data, _, error) in
                     if let imgData = data {
                         let img = UIImage(data: imgData)
