@@ -151,11 +151,11 @@ public class SampleView: UIView {
         network = Network(key: key, secret: secret)
     }
     
-    public func loadContent() {
+    public func loadContent(with spaceId: String) {
         guard let network = network else { return }
         
         let params = [
-            "spaceId": "slkdfslknlsknsdkvnsl"
+            "spaceId": spaceId
         ] as [String : AnyObject]
         
         network.post(with: "/test/serve/samplead", params: params, success: { [weak self] (response: Sample) in

@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate([leading, trailing, bottom])
         
         sampleView.setConfigs(with: "123456788", and: "12894198247189")
-        sampleView.loadContent()
+        sampleView.loadContent(with: "slkdfslknlsknsdkvnsl")
         
     }
 
